@@ -32,7 +32,7 @@ Raw data: [`/data`](./data) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](.
 3. **Power BI** – Data modeling (star-schema join on Client_Num), DAX measures (Sum of Revenue, Total Interest Earned, Avg Utilization Ratio), and dashboard design with slicers for Quarter, Week, Gender, Income Group, and Card Category.
 
 ## 📊 Dashboard 1 — Credit Card Transaction Report
-![Credit Card Transaction Dashboard]("C:\Users\Tanub\OneDrive\Documents\PowerBI Dashboards\power bi dashbaord2\cedit card dashboard.png")
+
 
 **Key Insights:**
 - Total Revenue: **55.32M** | Transaction Amount: **45M** | Total Interest: **7.84M** | Transaction Count: **656K**
@@ -42,7 +42,7 @@ Raw data: [`/data`](./data) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](.
 - **Bills** and **Entertainment** are the top spending categories by revenue.
 
 ## 👤 Dashboard 2 — Credit Card Customer Report
-![Customer Dashboard](./images/customer_dashboard.png)
+
 
 **Key Insights:**
 - Total Income across customers: **576M** | Customer Satisfaction Score (CSS): **3.19**
