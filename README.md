@@ -24,7 +24,7 @@ Two relational tables, created in a MySQL database (`CCDB`) and joined on `Clien
 | `cc_detail` | Card-level transaction data | ~10,000+ | Card_Category, Credit_Limit, Total_Trans_Amt, Total_Revolving_Bal, Interest_Earned, Use_Chip, Exp_Type |
 | `cust_detail` | Customer demographic data | ~10,000+ | Customer_Age, Gender, Income, Education_Level, Marital_Status, State_cd, Cust_Satisfaction_Score |
 
-Raw data: [`/DATA`](./DATA) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](./sql/CC_AND_CUST_TABLE_CREATION.sql)
+Raw data: [`/DATA`](./DATA) · Schema: [`/sql/CC AND CUST TABLE CREATION.sql`](./sql/CC%20AND%20CUST%20TABLE%20CREATION.sql)
 
 ## 🛠️ Tech Stack & Process
 1. **MySQL** – Designed schema and created the `CCDB` database with `cc_detail` and `cust_detail` tables (see `/sql`).
@@ -60,8 +60,8 @@ Raw data: [`/DATA`](./DATA) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](.
 ```bash
 git clone https://github.com/<your-username>/credit-card-customer-analytics-powerbi.git
 ```
-1. Create a MySQL database named `CCDB` and run [`CC_AND_CUST_TABLE_CREATION.sql`](./sql/CC_AND_CUST_TABLE_CREATION.sql) to create the schema.
-2. Import `data/credit_card.csv` and `data/cust_add.csv` into the `cc_detail` and `cust_detail` tables (e.g. via MySQL Workbench's Table Data Import Wizard).
+1. Create a MySQL database named `CCDB` and run [`CC AND CUST TABLE CREATION.sql`](./sql/CC%20AND%20CUST%20TABLE%20CREATION.sql) to create the schema.
+2. Import `data/credit_card.csv` and `data/cust_add.csv` into the `cc_detail` and `cust_detail` tables (e.g., via MySQL Workbench's Table Data Import Wizard).
 3. Open [`powerbi/credit_card-report.pbix`](./powerbi/credit_card-report.pbix) in Power BI Desktop and refresh the data source to point to your local MySQL connection.
 
 ## 📈 Skills Demonstrated
