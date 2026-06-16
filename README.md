@@ -1,11 +1,11 @@
 # 💳 Credit Card & Customer Insights Dashboard | Power BI Project
 
 [![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
-[![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://www.microsoft.com/excel)
 
 ## 📌 Project Overview
-This project is an end-to-end **Credit Card Transactions & Customer Analytics** solution built with **SQL Server, Excel, and Power BI**. It analyzes 10,000+ customer credit card records to uncover revenue trends, transaction behavior, customer demographics, and credit risk indicators — packaged into two interactive executive dashboards (Transaction Report and Customer Report) with cross-filtering, drill-downs, and KPI cards.
+This project is an end-to-end **Credit Card Transactions & Customer Analytics** solution built with **MySQL, Excel, and Power BI**. It analyzes 10,000+ customer credit card records to uncover revenue trends, transaction behavior, customer demographics, and credit risk indicators — packaged into two interactive executive dashboards (Transaction Report and Customer Report) with cross-filtering, drill-downs, and KPI cards.
 
 **Goal:** Help a financial services stakeholder identify which card categories, customer segments, and channels drive revenue and risk, in order to support credit limit, marketing, and retention decisions.
 
@@ -17,7 +17,7 @@ Credit card issuers need visibility into who their profitable customers are, whi
 - How do dependents, income group, and credit limit relate to revenue and satisfaction?
 
 ## 🗂️ Dataset
-Two relational tables joined on `Client_Num`:
+Two relational tables, created in a MySQL database (`CCDB`) and joined on `Client_Num`:
 
 | Table | Description | Rows | Key Fields |
 |---|---|---|---|
@@ -27,7 +27,7 @@ Two relational tables joined on `Client_Num`:
 Raw data: [`/data`](./data) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](./sql/CC_AND_CUST_TABLE_CREATION.sql)
 
 ## 🛠️ Tech Stack & Process
-1. **SQL Server** – Designed schema and created `cc_detail` and `cust_detail` tables (see `/sql`).
+1. **MySQL** – Designed schema and created the `CCDB` database with `cc_detail` and `cust_detail` tables (see `/sql`).
 2. **Excel** – Initial data cleaning, validation, and exploratory checks (see `/excel`).
 3. **Power BI** – Data modeling (star-schema join on Client_Num), DAX measures (Sum of Revenue, Total Interest Earned, Avg Utilization Ratio), and dashboard design with slicers for Quarter, Week, Gender, Income Group, and Card Category.
 
@@ -54,17 +54,15 @@ Raw data: [`/data`](./data) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](.
 
 ## 🚀 How to Use This Project
 ```bash
-git clone https://github.com/<your-username>/credit-card-customer-analysis-powerbi.git
+git clone https://github.com/<your-username>/credit-card-customer-analytics-powerbi.git
 ```
-1. Run [`CC_AND_CUST_TABLE_CREATION.sql`](./sql/CC_AND_CUST_TABLE_CREATION.sql) in SQL Server to create the schema.
-2. Import `data/credit_card.csv` and `data/cust_add.csv` into the respective tables.
-3. Open [`powerbi/credit_card-report.pbix`](./powerbi/credit_card-report.pbix) in Power BI Desktop and refresh the data source to point to your local SQL Server instance.
+1. Create a MySQL database named `CCDB` and run [`CC_AND_CUST_TABLE_CREATION.sql`](./sql/CC_AND_CUST_TABLE_CREATION.sql) to create the schema.
+2. Import `data/credit_card.csv` and `data/cust_add.csv` into the `cc_detail` and `cust_detail` tables (e.g. via MySQL Workbench's Table Data Import Wizard).
+3. Open [`powerbi/credit_card-report.pbix`](./powerbi/credit_card-report.pbix) in Power BI Desktop and refresh the data source to point to your local MySQL connection.
 
 ## 📈 Skills Demonstrated
-`SQL` `Data Modeling` `DAX` `Power BI` `Data Cleaning` `Excel` `ETL` `Data Visualization` `Business Analytics` `Dashboard Design` `KPI Reporting`
+`MySQL` `Data Modeling` `DAX` `Power BI` `Data Cleaning` `Excel` `ETL` `Data Visualization` `Business Analytics` `Dashboard Design` `KPI Reporting`
 
 ## 📬 Contact
-**[Your Name]** — Data Analyst
-
-
-⭐ If you found this project useful, consider giving it a star!
+**Ankita Bisht** — Data Analyst
+[LinkedIn](https://www.linkedin.com/in/ankita-bisht09) 
