@@ -7,7 +7,7 @@
 ## 📌 Project Overview
 This project is an end-to-end **Credit Card Transactions & Customer Analytics** solution built with **MySQL, Excel, and Power BI**. It analyzes 10,000+ customer credit card records to uncover revenue trends, transaction behavior, customer demographics, and credit risk indicators — packaged into two interactive executive dashboards (Transaction Report and Customer Report) with cross-filtering, drill-downs, and KPI cards.
 
-**Goal:** Help a financial services stakeholder identify which card categories, customer segments, and channels drive revenue and risk, in order to support credit limit, marketing, and retention decisions.
+**Goal:** Help a financial services stakeholder identify which card categories, customer segments, and channels drive revenue and risk, to support credit limit, marketing, and retention decisions.
 
 ## 🎯 Business Problem
 Credit card issuers need visibility into who their profitable customers are, which products generate the most revenue/interest, and where delinquency or low engagement risk is concentrated. This dashboard answers:
@@ -24,15 +24,17 @@ Two relational tables, created in a MySQL database (`CCDB`) and joined on `Clien
 | `cc_detail` | Card-level transaction data | ~10,000+ | Card_Category, Credit_Limit, Total_Trans_Amt, Total_Revolving_Bal, Interest_Earned, Use_Chip, Exp_Type |
 | `cust_detail` | Customer demographic data | ~10,000+ | Customer_Age, Gender, Income, Education_Level, Marital_Status, State_cd, Cust_Satisfaction_Score |
 
-Raw data: [`/data`](./data) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](./sql/CC_AND_CUST_TABLE_CREATION.sql)
+Raw data: [`/DATA`](./DATA) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](./sql/CC_AND_CUST_TABLE_CREATION.sql)
 
 ## 🛠️ Tech Stack & Process
 1. **MySQL** – Designed schema and created the `CCDB` database with `cc_detail` and `cust_detail` tables (see `/sql`).
 2. **Excel** – Initial data cleaning, validation, and exploratory checks (see `/excel`).
 3. **Power BI** – Data modeling (star-schema join on Client_Num), DAX measures (Sum of Revenue, Total Interest Earned, Avg Utilization Ratio), and dashboard design with slicers for Quarter, Week, Gender, Income Group, and Card Category.
 
-## 📊 Dashboard 1 — Credit Card Transaction Report
 
+
+## 📈 Dashboard 1 — Credit Card Transaction Report
+![Credit Card Transaction Dashboard](./images/cedit%20card%20dashboard.png)
 
 **Key Insights:**
 - Total Revenue: **55.32M** | Transaction Amount: **45M** | Total Interest: **7.84M** | Transaction Count: **656K**
@@ -41,7 +43,9 @@ Raw data: [`/data`](./data) · Schema: [`/sql/CC_AND_CUST_TABLE_CREATION.sql`](.
 - **Swipe** is the leading transaction channel, far ahead of Chip and Online.
 - **Bills** and **Entertainment** are the top spending categories by revenue.
 
-## 👤 Dashboard 2 — Credit Card Customer Report
+
+## 📈 Dashboard 2 — Credit Card Customer Report
+![Customer Dashboard](./images/customer%20dashboard.png)
 
 
 **Key Insights:**
